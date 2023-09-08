@@ -7,11 +7,11 @@
  * main - prints whether a random number is postive
   * or negative
    * Return: 0
- */ 
+*/ 
 int main(void)
 {
 	int n;
-	srand(time(0));
+	srand(time(0)); 
 
 	n = rand() - RAND_MAX / 2;
 	n = n % 100;
@@ -22,8 +22,8 @@ int main(void)
 	printf("%02d is negative\n", n);
 	else
 {
-	n = 0;
-	printf("%02d is zero\n", n);
+	n = n % 10;
+	printf("%d is zero\n", n);
 }
 return (0);
 }
