@@ -1,7 +1,7 @@
 #include<stdio.h>
 /**
 *main- prints lower then upper case characters
-*Return: 0
+*Return: 0 returns
 */
 int main(void)
 {
@@ -16,6 +16,5 @@ for (; ch <= 'Z'; ch++)
 putchar(ch);
 }
 putchar('$');
-putchar('\n');
 return (0);
 }
