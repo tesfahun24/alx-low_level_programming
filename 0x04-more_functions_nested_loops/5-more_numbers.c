@@ -15,10 +15,10 @@ for (y = 0; y <= 14; y++)
 {
 if (y > 9)
 {
-_putchar((i / 10) + '0');
+_putchar((y / 10) + '0');
 }
-_putchar(i % 10 + '0');
+_putchar(y % 10 + '0');
 }
-_putchar('10');
+_putchar('\n');
 }
 }
