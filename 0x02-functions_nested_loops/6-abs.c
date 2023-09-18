@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
-* int _abs - check the absolute value
+* _abs- check the absolute value
 *@a: Number to be checked
 * Return: Always positive.
 */
