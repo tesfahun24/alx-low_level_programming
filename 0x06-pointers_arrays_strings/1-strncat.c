@@ -8,7 +8,7 @@
 */
 char *_strncat(char *dest, char *src, int n)
 {
-   int dest_len = 0, i = 0;
+int dest_len = 0, i = 0;
 while (dest[dest_len] != '\0')
 {
 dest_len++;
