@@ -14,9 +14,9 @@ dest_len++;
 }
 while (src[i] != '\0')
 {
-dest[dest_len] = src[i];
-i++;
+*(dest + dest_len) = *(src + i);
 dest_len++;
+i++;
 }
-return (char *)dest;
+return (dest);
 }
