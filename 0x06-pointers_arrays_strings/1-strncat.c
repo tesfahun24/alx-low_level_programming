@@ -13,7 +13,8 @@ while (dest[dest_len] != '\0')
 {
 dest_len++;
 }
-while (i < n && src[i] != '\0') {
+while (i < n && src[i] != '\0')
+{
 *(dest + dest_len) = *(src + i);
 dest_len++;
 i++;
