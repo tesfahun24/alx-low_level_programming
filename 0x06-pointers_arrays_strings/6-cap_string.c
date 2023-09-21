@@ -14,7 +14,7 @@ if (*s == ' ' || *s == '\t' || *s == '\n' || *s == ',' || *s == ';' || *s == '.'
 {
 capitalize = 1;
 }
-else if(capitalize)
+else if (capitalize)
 {
 if (*s >= 'a' && *s <= 'z')
 {
@@ -24,5 +24,5 @@ capitalize = 0;
 }
 s++;
 }
-return(s1);
+return (s1);
 }
