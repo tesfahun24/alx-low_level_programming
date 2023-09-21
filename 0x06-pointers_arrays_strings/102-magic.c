@@ -1,8 +1,4 @@
 #include <stdio.h>
-/**
-* main - jygfdjhg
-* Return: jytfkj
-*/
 int main(void)
 {
 int n;
