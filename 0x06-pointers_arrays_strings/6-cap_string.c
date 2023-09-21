@@ -7,20 +7,22 @@
 char *cap_string(char *s1)
 {
 char *s = s1;
-int  capitalize = 1;
+int  cap = 1;
 while (*s)
 {
-if (*s == ' ' || *s == '\t' || *s == '\n' || *s == ',' || *s == ';' || *s == '.' || *s == '!' || *s == '?' || *s == '"' || *s == '(' || *s == ')' || *s == '{' || *s == '}')
+if (*s == ' ' || *s == '\t' || *s == '\n'
+	|| *s == ',' || *s == ';' || *s == '.' || *s == '!' || *s == '?'
+	|| *s == '"' || *s == '(' || *s == ')' || *s == '{' || *s == '}')
 {
-capitalize = 1;
+cap = 1;
 }
-else if (capitalize)
+else if (cap)
 {
 if (*s >= 'a' && *s <= 'z')
 {
 *s -= 32;
 }
-capitalize = 0;
+cap = 0;
 }
 s++;
 }
