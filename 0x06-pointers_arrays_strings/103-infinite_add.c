@@ -1,38 +1,47 @@
-#include<stdio.h>
-#include<string.h>
+#include "main.h"
+
 /**
-*infinite_add - print
-*@n1: number
-*@n2:  number
-*@r: number
-*@size_r: number
-*Return: return 0
+* infinite_add - adds two numbers
+* @n1: first number
+* @n2: second number
+* @r: buffer for result
+* @size_r: buffer size
+* ahhh! Crazy task! Expand your knowledge
+* Return: address of r or 0
 */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-/* Check if the result can be stored in the buffer.*/
-if (strlen(n1) + strlen(n2) + 1 > size_r)
-{
+int i, j, k, l, m, n;
+for (i = 0; n1[i]; i++)
+;
+for (j = 0; n2[j]; j++)
+;
+if (i > size_r || j > size_r)
 return (0);
-}
-/* Initialize the carry.*/
-/* Iterate over the numbers, adding the digits and carrying over any excess.*/
-int carry = 0; i = strlen(n1) - 1, j = strlen(n2) - 1,  k = size_r - 1;
-while (i >= 0 || j >= 0 || carry > 0)
+m = 0;
+for (i -= 1, j -= 1, k = 0; k < size_r - 1; i--, j--, k++)
 {
-int sum = (i >= 0 ? n1[i] - '0' : 0) + (j >= 0 ? n2[j] - '0' : 0) + carry;
-r[k--] = sum % 10 + '0';
-carry = sum / 10;
-i--;
-j--;
-}
-/* Reverse the result string.*/
-for (i = 0, j = size_r - 1; i < j; i++, j--)
+n = m;
+if (i >= 0)
+n += n1[i] - '0';
+if (j >= 0)
+n += n2[j] - '0';
+if (i < 0 && j < 0 && n == 0)
 {
-char temp = r[i];
-r[i] = r[j];
-r[j] = temp;
+break;
 }
-/* Return a pointer to the result.*/
+m = n / 10;
+r[k] = n % 10 + '0';
+}
+r[k] = '\0';
+if (i >= 0 || j >= 0 || m)
+return (0);
+for (k -= 1, l = 0; l < k; k--, l++)
+{
+m = r[k];
+r[k] = r[l];
+r[l] = m;
+}
 return (r);
 }
+/*Bwave */
