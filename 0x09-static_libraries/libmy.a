@@ -83,7 +83,10 @@ _putchar.o:
                  U write
 julien@ubuntu:~/0x09. Static Librairies$ cat main.c
 #include "main.h"
-
+/**
+* main -  display
+* Return: always 0
+*/
 int main(void)
 {
 	_puts("\"At the end of the day, my goal was to be the best hacker\"\n\t- Kevin Mitnick");
